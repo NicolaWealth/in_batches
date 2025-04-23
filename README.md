@@ -13,8 +13,8 @@ This package should be installed via npm. You must have npm installed first. The
 The 'in_batches' package allows for efficient processing of large data sets in manageable batches to optimize performance and handle asynchronous tasks effectively.
 
 # Interface
-The package exports two functions, `inBatches(elements, size, callback)` and `inBatchesAsync(elements, size, callback)` which
-behave in the same manner except that `inBatchesAsync` performs it's `callback` function calls asynchronously. Here `elements` is an iterable object (such as an array) and `size` refers to the desired batch size, i.e. the size of the groupings of `elements`.
+The package exports the object `inBatches` with functions: `inBatches.sync(elements, size, callback)` and `inBatches.async(elements, size, callback)` which
+behave in the same manner except that `inBatches.async` performs it's `callback` function calls asynchronously. Here `elements` is an iterable object (such as an array) and `size` refers to the desired batch size, i.e. the size of the groupings of `elements`.
 `callback` refers to the function which will be applied to each batch of `elements` where `callback` is of the form  `(elements, batchNum) => void`. The `callback` function consumes a subset of `elements` and a `batchNum` (0, 1, 2, ...) and does not return anything.
 If `size` does not evenly divide `elements`, the final batch will contain the remainder of `elements` after division by `size` and thus will contain less than `size` items.
 

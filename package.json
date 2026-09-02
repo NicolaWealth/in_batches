@@ -33,7 +33,7 @@
   "license": "MIT",
   "scripts": {
     "clean": "rm -rf dist/* && rm -f tsconfig.tsbuildinfo tsconfig.types.tsbuildinfo",
-    "build": "rollup -c && tsc -p tsconfig.types.json",
+    "build": "mkdir -p dist && rollup -c && tsc -p tsconfig.types.json",
     "lint": "eslint src",
     "test": "mocha",
     "test-r": "mocha -R spec",

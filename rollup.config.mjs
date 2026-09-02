@@ -15,7 +15,9 @@ export default {
         composite: false,
         declaration: false,
         declarationMap: false,
-        module: "ESNext"
+        module: "ESNext",
+        inlineSourceMap: false,
+        sourceMap: true
       }
     }),
     terser()

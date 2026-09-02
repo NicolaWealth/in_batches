@@ -32,7 +32,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "clean": "rm -rf dist/* && rm -f tsconfig.tsbuildinfo",
+    "clean": "rm -rf dist/* && rm -f tsconfig.tsbuildinfo tsconfig.types.tsbuildinfo",
     "build": "rollup -c && tsc -p tsconfig.types.json",
     "lint": "eslint src",
     "test": "mocha",
